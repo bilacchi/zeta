@@ -1,0 +1,29 @@
+site_name: Zeta
+repo_url: https://google.com
+repo_name: cbilacchi/kappa
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  logo: assets/logo-w.png
+  favicon: assets/logo.ico
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css

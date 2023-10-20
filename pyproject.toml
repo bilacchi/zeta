@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "kappa"
+name = "zeta"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
@@ -29,3 +29,11 @@ mkdocstrings-python = "^1.7.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+docs = "mkdocs server"
