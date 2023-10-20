@@ -1,0 +1,21 @@
+name: Pipeline
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.11'
+
+      - name: Adding Poetry
+        run: pip install poetry 
+      
+      - name: Installing project dependencies
+        run: poetry install --without doc
