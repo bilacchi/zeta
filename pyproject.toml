@@ -36,4 +36,4 @@ line_length = 79
 
 [tool.taskipy.tasks]
 lint = "blue --check --diff . && isort --check --diff ."
-docs = "mkdocs server"
+docs = "mkdocs serve"
