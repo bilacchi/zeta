@@ -1,6 +1,6 @@
 site_name: Zeta
-repo_url: https://google.com
-repo_name: cbilacchi/kappa
+repo_url: https://github.com/bilacchi/zeta/
+repo_name: bilacchi/zeta
 edit_uri: tree/main/docs
 
 theme:
@@ -23,6 +23,8 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.footer
+  custom_dir: docs/overrides
 
 markdown_extensions:
   - attr_list
@@ -39,12 +41,18 @@ extra_css:
 
 watch:
   - zeta
+  - zeta/colormap
+  - zeta/plot
 
 plugins:
 - macros
 - mkdocstrings:
     handlers:
       python:
+        options:
+          show_symbol_type_heading: true
+          separate_signature: true
+          show_signature_annotations: true
         paths: [zeta]
 
 extra:
