@@ -1,3 +1,4 @@
-from .categorical import dispersion_plot
+from .categorical import (raincloud,
+                          paired_raincloud)
 
-__all__ = ['dispersion_plot']
+__all__ = ['raincloud', 'paired_raincloud']

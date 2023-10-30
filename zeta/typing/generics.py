@@ -14,5 +14,6 @@ COLOR_FORMAT = Literal['hex', 'rgb', 'hls']
 
 # Plot types
 BW_TYPES = int | float | Literal['silverman', 'scott']
-BOUNDS = Sequence[Tuple[float | int, float | int]]
+BOUNDS = Sequence[Tuple[float | int | None, float | int | None]]
 AXES = Axes
+ERROR = Literal['ci', 'std', 'se']
